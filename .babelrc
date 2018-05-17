@@ -1,0 +1,29 @@
+{
+  "presets": [
+    ["env", {"modules": false}],
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-regenerator",
+    ["transform-imports", {
+      "lodash": {
+        "transform": "lodash/${member}",
+        "preventFullImport": true
+      },
+      "routes": {
+        "transform": "routes/${member}",
+        "preventFullImport": true
+      },
+      "models": {
+        "transform": "models/${member}",
+        "preventFullImport": true
+      },
+      "components": {
+        "transform": "components/${member}",
+        "preventFullImport": true
+      }
+    }],
+    "syntax-dynamic-import"
+  ]
+}
