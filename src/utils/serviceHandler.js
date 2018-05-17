@@ -1,4 +1,4 @@
-import * as Constants from 'utils/constants'
+//import * as Constants from 'utils/constants'
 import * as Config from 'utils/config'
 import { payloadFormatter } from 'utils/utilites'
 import { call } from 'redux-saga/effects'
@@ -34,7 +34,7 @@ const checkStatus = response => {
   } else if (response.status >= 400 && response.status < 500) {
     throw apiError(response.status)
   } else if (response.status >= 500 && response.status < 600) {
-    throw Constants.ERROR.DEFAULT_MSG
+    throw 'Constants.ERROR.DEFAULT_MSG'
   }
 }
 
